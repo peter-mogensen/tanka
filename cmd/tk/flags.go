@@ -81,7 +81,7 @@ func cliCodeParser(fs *pflag.FlagSet) (func() map[string]string, func() map[stri
 	extStrFile := fs.StringArray("ext-str-file", nil, "Read string value of extVar from file (Format: key=<file>)")
 
 	tlaCodeFile := fs.StringArray("tla-code-file", nil, "Read code value of top level function from file (Format: key=<file>)")
-	tlaStrFile := fs.StringArray("tla-str=file", nil, "Read string value of top level function from file (Format: key=<file>)")
+	tlaStrFile := fs.StringArray("tla-str-file", nil, "Read string value of top level function from file (Format: key=<file>)")
 
 	newParser := func(kind string, code, str, codeFile, strFile *[]string) func() map[string]string {
 		return func() map[string]string {
